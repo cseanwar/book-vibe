@@ -1,7 +1,13 @@
 import React, { createContext, useState } from "react";
 import { toast } from "react-toastify";
-import { addReadListToLocalDB, getAllReadListFromLocalDB } from "../utils/localReadDB";
-import { addWishListToLocalDB, getAllWishListFromLocalDB } from "../utils/localWishDB";
+import {
+  addReadListToLocalDB,
+  getAllReadListFromLocalDB,
+} from "../utils/localReadDB";
+import {
+  addWishListToLocalDB,
+  getAllWishListFromLocalDB,
+} from "../utils/localWishDB";
 
 export const BookContext = createContext();
 
@@ -26,7 +32,7 @@ const BookProvider = ({ children }) => {
       toast.error("The book is already exist in the list");
     } else {
       setReadList([...readList, currentBook]);
-      toast.success(`${currentBook.bookName} is added to read list`)
+      toast.success(`${currentBook.bookName} is added to read list`);
     }
   };
 
@@ -47,7 +53,7 @@ const BookProvider = ({ children }) => {
       toast.error("This book is already in read list");
       return;
     }
-    
+
     const isExistBook = wishList.find(
       (book) => book.bookId === currentBook.bookId,
     );
@@ -56,7 +62,7 @@ const BookProvider = ({ children }) => {
       toast.error("The book is already exist in the list");
     } else {
       setWishList([...wishList, currentBook]);
-      toast.success(`${currentBook.bookName} is added to wish list`)
+      toast.success(`${currentBook.bookName} is added to wish list`);
     }
   };
 

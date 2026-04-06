@@ -72,9 +72,12 @@ const BookDetails = () => {
             >
               Mark as Read
             </button>
-            <button className="btn btn-primary"
-            onClick={() => handleWishList(expectedBook)}
-            >Add to Wishlist</button>
+            <button
+              className="btn btn-primary"
+              onClick={() => handleWishList(expectedBook)}
+            >
+              Add to Wishlist
+            </button>
           </div>
         </div>
       </div>
