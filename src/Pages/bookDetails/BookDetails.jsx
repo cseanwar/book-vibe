@@ -20,7 +20,6 @@ const BookDetails = () => {
   // console.log(expectedBook, "expectedBook")
 
   const {
-    bookId,
     bookName,
     author,
     image,
@@ -36,44 +35,54 @@ const BookDetails = () => {
   const { handleMarkAsRead, handleWishList } = useContext(BookContext);
 
   return (
-    <div className="grid grid-cols-2 bg-base-100 shadow-sm container mx-auto my-8">
-      <figure className="w-full flex items-center justify-center bg-gray-100 rounded-xl">
-        <img src={image} alt="Album" className="h-100" />
+    <div className="grid grid-cols-2 gap-12 container mx-auto my-13">
+      <figure className="w-full flex items-center justify-center bg-[#13131305] rounded-2xl p-18.25">
+        <img src={image} alt="Album" className="h-141 w-106.25" />
       </figure>
-      <div className="card-body space-y-3">
-        <h2 className="card-title text-2xl">{bookName}</h2>
-        <h2 className="card-title">By: {author}</h2>
-        <p className="py-2 border-y">{category}</p>
-        <p>Review: {review}</p>
-        <div className="flex items-center gap-2 ">
+      <div>
+        <h2 className="card-title text-[40px] font-bold mb-4">{bookName}</h2>
+        <h2 className="card-title mb-6 text-base text-[#13131380]">
+          By: {author}
+        </h2>
+        <div className="flex flex-col space-y-4 mb-6">
+          <div className="border-t border-[#13131315]"></div>
+          <p className="text-[#13131380] text-base">{category}</p>
+          <div className="border-b border-[#13131315]"></div>
+        </div>
+        <p className="mb-6"><span className="font-bold text-base">Review: </span>{review}</p>
+        <div className="flex items-center gap-4 mb-6">
+          <span className="font-bold text-base">Tag</span>
           {tags.map((tag, ind) => (
             <div
               key={ind}
-              className="badge text-green-500 bg-green-100 font-bold "
+              className="badge text-[#23BE0A] bg-[#23BE0A10] text-base rounded-full font-bold"
             >
-              {tag}
+              #{tag}
             </div>
           ))}
         </div>
-        <div className="border-t space-y-3">
-          <div className="flex justify-between items-center gap-2">
-            <span>Number of pages: </span> <span>{totalPages}</span>
+        <div className="border-t border-[#13131315]">
+          <div className="flex justify-between items-center mt-6 mb-3">
+            <span className="text-[#13131370] text-base">Number of pages: </span> <span className="font-semibold text-base">{totalPages}</span>
           </div>
-          <div className="flex justify-between items-center gap-2">
-            <span>publisher: </span> <span>{publisher}</span>
+          <div className="flex justify-between items-center gap-2 mb-3">
+            <span className="text-[#13131370] text-base">publisher: </span> <span className="font-semibold text-base">{publisher}</span>
           </div>
-          <div className="flex justify-between items-center gap-2">
-            <span>Publish time: </span> <span>{yearOfPublishing}</span>
+          <div className="flex justify-between items-center gap-2 space-y-3">
+            <span className="text-[#13131370] text-base">Publish time: </span> <span className="font-semibold text-base">{yearOfPublishing}</span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex justify-between items-center gap-2 mb-8">
+            <span className="text-[#13131370] text-base">Rating: </span> <span className="font-semibold text-base">{rating}</span>
+          </div>
+          <div className="flex items-center gap-4">
             <button
-              className="btn"
+              className="btn bg-[#13131330] rounded-lg font-semibold text-lg"
               onClick={() => handleMarkAsRead(expectedBook)}
             >
               Mark as Read
             </button>
             <button
-              className="btn btn-primary"
+              className="btn bg-[#50B1C9] rounded-lg text-lg"
               onClick={() => handleWishList(expectedBook)}
             >
               Add to Wishlist

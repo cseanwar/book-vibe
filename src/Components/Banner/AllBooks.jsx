@@ -8,9 +8,9 @@ const AllBooks = () => {
   console.log(books, "books");
   return (
     <div className="container mx-auto my-25">
-      <h2 className="font-bold text-3xl text-center mb-9">Books</h2>
+      <h2 className="font-bold text-[40px] text-center mb-9">Books</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {books.map((book, ind) => {
           return <BookCard key={ind} book={book} />;
         })}

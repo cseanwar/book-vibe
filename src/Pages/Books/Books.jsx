@@ -12,14 +12,17 @@ const Books = () => {
 
   return (
     <div className="container mx-auto my-3">
-      <div className="flex justify-center my-3">
+      <div className="flex flex-col justify-center items-center gap-8 my-9">
+        <div className="p-8.25 bg-[#13131305] rounded-2xl w-full">
+          <p className="text-center font-bold text-[28px]">Books</p>
+        </div>
         <div className="dropdown dropdown-start">
-          <div tabIndex={0} role="button" className="btn m-1">
+          <div tabIndex={0} role="button" className="btn m-1 bg-[#23BE0A] text-[#FFFFFF] rounded-lg font-semibold text-lg">
             Sort by: {sortingType} ⬇️
           </div>
           <ul
             tabIndex="-1"
-            className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+            className="dropdown-content menu z-1 w-52 p-2 shadow-sm"
           >
             <li onClick={() => setSortingType("pages")}>
               <a>Pages</a>

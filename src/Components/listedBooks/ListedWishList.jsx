@@ -32,8 +32,8 @@ const ListedWishList = ({ sortingType }) => {
   }
 
   return (
-    <div>
-      <div>
+    <div className="my-8">
+      <div className="flex flex-col gap-6">
         {filteredWishList.map((book, ind) => (
           <BookCard key={ind} book={book} />
         ))}
