@@ -18,9 +18,9 @@ Book Vibe is built for book enthusiasts who want a clean, fast way to:
 - Click into any book for a full detail view
 - Mark books as **Read** or add them to a **Wishlist**
 - Revisit their saved lists across sessions via `localStorage`
-- Sort their lists by rating for quick prioritisation
+- Sort their lists by rating for quick prioritization
 
-The project demonstrates core React concepts including component architecture, React Router DOM for multi-page navigation, `useState` / `useEffect` hooks, `localStorage` persistence, and prop-driven UI — built as part of the **Programming Hero Complete Web Development Bootcamp (Assignment 8)**.
+The project demonstrates core React concepts including component architecture, React Router DOM for multi-page navigation, `useState` / `useEffect` hooks, `localStorage` persistence, and prop-driven UI.
 
 ---
 
